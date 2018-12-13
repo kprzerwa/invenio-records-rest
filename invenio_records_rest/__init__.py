@@ -327,7 +327,8 @@ option in ``RECORDS_REST_ENDPOINTS`` to point to the function implementing it:
 ...     return Q()
 ...
 >>> def my_search_factory(*args, **kwargs):
-...     return default_search_factory(*args, **kwargs, query_parser=my_query_parser)
+...     return default_search_factory(*args,
+...                                   query_parser=my_query_parser, **kwargs)
 ...
 >>> RECORDS_REST_ENDPOINTS = {
 ...     'recid': {
